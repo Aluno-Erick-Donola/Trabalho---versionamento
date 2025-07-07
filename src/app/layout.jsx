@@ -41,6 +41,7 @@ export default function RootLayout({ children }) {
   <Button asChild>
     <Link href="/sobre-nos">Sobre Nós</Link>
   </Button>
+  
 </nav>
 
         {children}
