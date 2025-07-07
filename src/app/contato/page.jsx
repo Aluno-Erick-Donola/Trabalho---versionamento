@@ -10,7 +10,7 @@ export default function Contato() {
         <ul className="list-disc list-inside text-gray-800 space-y-2">
           <li>Email: <a href="mailto:contato@empresa.com" className="text-blue-600 underline">contato@empresa.com</a></li>
           <li>Telefone: <a href="tel:+551112345678" className="text-blue-600 underline">(11) 1234-5678</a></li>
-          <li>Endereço: Rua Exemplo, 123, Bairro Central, São Paulo - SP</li>
+          <li>Endereço: Rua Exemplo, 123, Bairro Centro, Cataguases - MG</li>
         </ul>
       </section>
       <section className="mt-8">

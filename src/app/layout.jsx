@@ -1,6 +1,6 @@
-import { Button } from "../components/ui/button";
+import { Button } from "../components/ui/button"; 
 import { Geist, Geist_Mono } from "next/font/google";
-import Link from "next/link"; // importa o Link do Next.js
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,31 +20,33 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <nav className="flex gap-4 p-4 bg-gray-200 rounded-lg mb-4">
-  <Button asChild>
-    <Link href="/">Home</Link>
-  </Button>
-  <Button asChild>
-    <Link href="/contato">Contato</Link>
-  </Button>
-  <Button asChild>
-    <Link href="/produtos">Produtos</Link>
-  </Button>
-  <Button asChild>
-    <Link href="/eventos">Eventos</Link>
-  </Button>
-  <Button asChild>
-    <Link href="/clientes">Clientes</Link>
-  </Button>
-  <Button asChild>
-    <Link href="/sobre-nos">Sobre Nós</Link>
-  </Button>
-  
-</nav>
-
-        {children}
+    <html lang="en" className="h-screen overflow-hidden">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen overflow-hidden flex flex-col`}
+      >
+        <nav className="flex gap-3 p-4 bg-white shadow-md rounded-md">
+          <Button variant="ghost" asChild>
+            <Link href="/">Home</Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="/contato">Contato</Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="/produtos">Produtos</Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="/eventos">Eventos</Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="/clientes">Clientes</Link>
+          </Button>
+          <Button variant="ghost" asChild>
+            <Link href="/sobre-nos">Sobre Nós</Link>
+          </Button>
+        </nav>
+        <main className="flex-grow">
+          {children}
+        </main>
       </body>
     </html>
   );
